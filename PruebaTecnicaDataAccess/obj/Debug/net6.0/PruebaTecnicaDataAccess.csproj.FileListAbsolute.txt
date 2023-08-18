@@ -1,0 +1,14 @@
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\bin\Debug\net6.0\PruebaTecnicaDataAccess.deps.json
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\bin\Debug\net6.0\PruebaTecnicaDataAccess.runtimeconfig.json
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\bin\Debug\net6.0\PruebaTecnicaDataAccess.dll
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\bin\Debug\net6.0\PruebaTecnicaDataAccess.pdb
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\PruebaTecnicaDataAccess.csproj.AssemblyReference.cache
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\PruebaTecnicaDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\PruebaTecnicaDataAccess.AssemblyInfoInputs.cache
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\PruebaTecnicaDataAccess.AssemblyInfo.cs
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\PruebaTecnicaDataAccess.csproj.CoreCompileInputs.cache
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\PruebaTecnicaDataAccess.dll
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\refint\PruebaTecnicaDataAccess.dll
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\PruebaTecnicaDataAccess.pdb
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\PruebaTecnicaDataAccess.genruntimeconfig.cache
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaDataAccess\obj\Debug\net6.0\ref\PruebaTecnicaDataAccess.dll
