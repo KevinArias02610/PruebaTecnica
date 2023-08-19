@@ -10,5 +10,6 @@ namespace PruebaTecnicaBusiness.Interfaces
     public interface IAuthor
     {
         List<AuthorDTO> GetAllAuthors();
+        AuthorDTO GetAuthorById(int id);
     }
 }

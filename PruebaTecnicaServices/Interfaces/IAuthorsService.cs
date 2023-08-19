@@ -10,5 +10,6 @@ namespace PruebaTecnicaServices.Interfaces
     public interface IAuthorsService
     {
         List<Author> GetAllAuthors();
+        Author GetAuthorById(int id);
     }
 }

@@ -18,10 +18,24 @@ namespace PruebaTecnicaServices.Class
             try
             {
                 return contextdb.Authors.ToList();
-            }catch
+            }
+            catch
             {
                 return new List<Author>();
             }
         }
+
+        public Author GetAuthorById(int id)
+        {
+            try
+            {
+                return contextdb.Authors.FirstOrDefault(author => author.Id == id)!;
+            }
+            catch
+            {
+                return new Author();
+            }
+        }
+
     }
 }
