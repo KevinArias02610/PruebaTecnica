@@ -1,0 +1,15 @@
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\PruebaTecnicaServices.csproj.AssemblyReference.cache
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\PruebaTecnicaServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\PruebaTecnicaServices.AssemblyInfoInputs.cache
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\PruebaTecnicaServices.AssemblyInfo.cs
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\PruebaTecnicaServices.csproj.CoreCompileInputs.cache
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\bin\Debug\net6.0\PruebaTecnicaServices.deps.json
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\bin\Debug\net6.0\PruebaTecnicaServices.dll
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\bin\Debug\net6.0\PruebaTecnicaServices.pdb
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\bin\Debug\net6.0\PruebaTecnicaDataAccess.dll
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\bin\Debug\net6.0\PruebaTecnicaDataAccess.pdb
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\PruebaTecnicaServices.csproj.CopyComplete
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\PruebaTecnicaServices.dll
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\refint\PruebaTecnicaServices.dll
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\PruebaTecnicaServices.pdb
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\ref\PruebaTecnicaServices.dll

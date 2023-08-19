@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Class\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\PruebaTecnicaDTOs\PruebaTecnicaDTOs.csproj" />
+    <ProjectReference Include="..\PruebaTecnicaServices\PruebaTecnicaServices.csproj" />
   </ItemGroup>
 
 </Project>
