@@ -1,4 +1,4 @@
-﻿using PruebaTecnicaDataAccess.DBContext;
+﻿using PruebaTecnicaDataAccess.ContextDB;
 using PruebaTecnicaDataAccess.ModelsDB;
 using PruebaTecnicaServices.Interfaces;
 using System;

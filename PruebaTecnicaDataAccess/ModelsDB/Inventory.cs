@@ -5,7 +5,7 @@ namespace PruebaTecnicaDataAccess.ModelsDB
 {
     public partial class Inventory
     {
+        public decimal Id { get; set; }
         public decimal? NumberOfRecords { get; set; }
-        public decimal? Id { get; set; }
     }
 }

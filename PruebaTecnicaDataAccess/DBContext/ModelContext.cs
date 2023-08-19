@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using PruebaTecnicaDataAccess.ModelsDB;
 
-namespace PruebaTecnicaDataAccess.DBContext
+namespace PruebaTecnicaDataAccess.ContextDB
 {
     public partial class ModelContext : DbContext
     {
@@ -103,16 +103,14 @@ namespace PruebaTecnicaDataAccess.DBContext
 
             modelBuilder.Entity<Inventory>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("INVENTORY");
 
                 entity.Property(e => e.Id)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(38)")
                     .HasColumnName("ID");
 
                 entity.Property(e => e.NumberOfRecords)
-                    .HasColumnType("NUMBER")
+                    .HasColumnType("NUMBER(38)")
                     .HasColumnName("NUMBER_OF_RECORDS");
             });
 
