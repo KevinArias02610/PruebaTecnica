@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using PruebaTecnicaDataAccess.ModelsDB;
 
-namespace PruebaTecnicaDataAccess.ModelsDB
+namespace PruebaTecnicaDataAccess.DBContext
 {
     public partial class ModelContext : DbContext
     {
