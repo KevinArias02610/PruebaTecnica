@@ -107,6 +107,10 @@ namespace PruebaTecnicaDataAccess.DBContext
 
                 entity.ToTable("INVENTORY");
 
+                entity.Property(e => e.Id)
+                    .HasColumnType("NUMBER")
+                    .HasColumnName("ID");
+
                 entity.Property(e => e.NumberOfRecords)
                     .HasColumnType("NUMBER")
                     .HasColumnName("NUMBER_OF_RECORDS");

@@ -14,13 +14,14 @@ namespace PruebaTecnicaBusiness.Class
         private readonly IAuthorsService _authorService;
         public Author(IAuthorsService authorsService)
         {
-            _authorService = authorsService;
+            _authorService = authorsService; //Inyección de interfaz de servicios uthorsService
         }
+
         public List<AuthorDTO> GetAllAuthors()
         {
             try
             {
-                List<PruebaTecnicaDataAccess.ModelsDB.Author> resp = _authorService.GetAllAuthors();
+                List<PruebaTecnicaDataAccess.ModelsDB.Author> resp = _authorService.GetAllAuthors(); //Consumo de servicio consulta a BD
 
                 if (resp.Count > 0)
                 {
@@ -31,13 +32,13 @@ namespace PruebaTecnicaBusiness.Class
                         DateOfBirth = au.DateOfBirth,
                         CityOfOrigin = au.CityOfOrigin,
                         Email = au.Email
-                    }).ToList();
+                    }).ToList(); //Mediante una consulta LINQ mapeamos el objeto en base a la respuesta del servicio
 
                     return response;
                 }
                 else
                 {
-                    return new List<AuthorDTO>();
+                    return new List<AuthorDTO>(); //En caso de no obtener respuesta retornamos la lista vacía.
                 }
             }
             catch
@@ -50,7 +51,7 @@ namespace PruebaTecnicaBusiness.Class
         {
             try
             {
-                PruebaTecnicaDataAccess.ModelsDB.Author resp = _authorService.GetAuthorById(id);
+                PruebaTecnicaDataAccess.ModelsDB.Author resp = _authorService.GetAuthorById(id); //Consumo de servicio consulta por id a BD
 
                 AuthorDTO response = new()
                 {
@@ -60,7 +61,7 @@ namespace PruebaTecnicaBusiness.Class
                     CityOfOrigin = resp.CityOfOrigin,
                     Email = resp.Email
                 };
-                return response;
+                return response; //Mapeamos el objeto en base a la respuesta del servicio
             }
             catch
             {
