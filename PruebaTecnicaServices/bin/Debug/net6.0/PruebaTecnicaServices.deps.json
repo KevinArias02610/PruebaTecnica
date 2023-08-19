@@ -9,6 +9,7 @@
       "PruebaTecnicaServices/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.21",
+          "PruebaTecnicaDTOs": "1.0.0",
           "PruebaTecnicaDataAccess": "1.0.0"
         },
         "runtime": {
@@ -373,6 +374,11 @@
         "runtime": {
           "PruebaTecnicaDataAccess.dll": {}
         }
+      },
+      "PruebaTecnicaDTOs/1.0.0": {
+        "runtime": {
+          "PruebaTecnicaDTOs.dll": {}
+        }
       }
     }
   },
@@ -579,6 +585,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "PruebaTecnicaDataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PruebaTecnicaDTOs/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

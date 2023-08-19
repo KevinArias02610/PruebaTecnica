@@ -11,6 +11,16 @@ namespace PruebaTecnicaServices.Class
     public class InventoryService : IInventoryService
     {
         ModelContext contextdb = new ModelContext();
+
+        public int GetNumberOfRecords()
+        {
+            try
+            {
+                return Convert.ToInt32(contextdb.Inventories.FirstOrDefault(inv => inv.Id == 1)!.NumberOfRecords);
+            }
+            catch { return 0; }
+        }
+
         public bool UpdateNumberOfRecords(int quantity)
         {
             try
@@ -25,7 +35,6 @@ namespace PruebaTecnicaServices.Class
                 }
 
                 return false; // Error al actualizar actualizar
-
             }
             catch
             {

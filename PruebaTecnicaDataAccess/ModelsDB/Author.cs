@@ -16,6 +16,6 @@ namespace PruebaTecnicaDataAccess.ModelsDB
         public string? CityOfOrigin { get; set; }
         public string? Email { get; set; }
 
-        public virtual ICollection<Book> Books { get; set; }
+        public virtual ICollection<Book>? Books { get; set; }
     }
 }

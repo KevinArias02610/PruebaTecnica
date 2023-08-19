@@ -13,3 +13,5 @@ C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\Pru
 C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\refint\PruebaTecnicaServices.dll
 C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\PruebaTecnicaServices.pdb
 C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\obj\Debug\net6.0\ref\PruebaTecnicaServices.dll
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\bin\Debug\net6.0\PruebaTecnicaDTOs.dll
+C:\.Net\Prueba Técnica\PruebaTecnica\PruebaTecnicaServices\bin\Debug\net6.0\PruebaTecnicaDTOs.pdb

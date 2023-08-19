@@ -230,6 +230,9 @@
             "projectReferences": {
               "C:\\.Net\\Prueba Técnica\\PruebaTecnica\\PruebaTecnicaDataAccess\\PruebaTecnicaDataAccess.csproj": {
                 "projectPath": "C:\\.Net\\Prueba Técnica\\PruebaTecnica\\PruebaTecnicaDataAccess\\PruebaTecnicaDataAccess.csproj"
+              },
+              "C:\\.Net\\Prueba Técnica\\PruebaTecnica\\PruebaTecnicaDTOs\\PruebaTecnicaDTOs.csproj": {
+                "projectPath": "C:\\.Net\\Prueba Técnica\\PruebaTecnica\\PruebaTecnicaDTOs\\PruebaTecnicaDTOs.csproj"
               }
             }
           }

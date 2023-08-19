@@ -557,6 +557,16 @@
         "runtime": {
           "bin/placeholder/PruebaTecnicaDataAccess.dll": {}
         }
+      },
+      "PruebaTecnicaDTOs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PruebaTecnicaDTOs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PruebaTecnicaDTOs.dll": {}
+        }
       }
     }
   },
@@ -1254,11 +1264,17 @@
       "type": "project",
       "path": "../PruebaTecnicaDataAccess/PruebaTecnicaDataAccess.csproj",
       "msbuildProject": "../PruebaTecnicaDataAccess/PruebaTecnicaDataAccess.csproj"
+    },
+    "PruebaTecnicaDTOs/1.0.0": {
+      "type": "project",
+      "path": "../PruebaTecnicaDTOs/PruebaTecnicaDTOs.csproj",
+      "msbuildProject": "../PruebaTecnicaDTOs/PruebaTecnicaDTOs.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.21",
+      "PruebaTecnicaDTOs >= 1.0.0",
       "PruebaTecnicaDataAccess >= 1.0.0"
     ]
   },
@@ -1296,6 +1312,9 @@
           "projectReferences": {
             "C:\\.Net\\Prueba Técnica\\PruebaTecnica\\PruebaTecnicaDataAccess\\PruebaTecnicaDataAccess.csproj": {
               "projectPath": "C:\\.Net\\Prueba Técnica\\PruebaTecnica\\PruebaTecnicaDataAccess\\PruebaTecnicaDataAccess.csproj"
+            },
+            "C:\\.Net\\Prueba Técnica\\PruebaTecnica\\PruebaTecnicaDTOs\\PruebaTecnicaDTOs.csproj": {
+              "projectPath": "C:\\.Net\\Prueba Técnica\\PruebaTecnica\\PruebaTecnicaDTOs\\PruebaTecnicaDTOs.csproj"
             }
           }
         }

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PruebaTecnicaDataAccess\PruebaTecnicaDataAccess.csproj" />
+    <ProjectReference Include="..\PruebaTecnicaDTOs\PruebaTecnicaDTOs.csproj" />
   </ItemGroup>
 
 </Project>

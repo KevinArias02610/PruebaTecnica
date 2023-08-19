@@ -9,6 +9,7 @@ namespace PruebaTecnicaServices.Interfaces
     public interface IInventoryService
     {
         bool UpdateNumberOfRecords(int quantity);
+        int GetNumberOfRecords();
 
     }
 }

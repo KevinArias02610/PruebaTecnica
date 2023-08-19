@@ -382,6 +382,7 @@
       "PruebaTecnicaServices/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.21",
+          "PruebaTecnicaDTOs": "1.0.0",
           "PruebaTecnicaDataAccess": "1.0.0"
         },
         "runtime": {
