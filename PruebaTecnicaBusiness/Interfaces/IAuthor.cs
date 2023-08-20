@@ -1,4 +1,6 @@
 ﻿using PruebaTecnicaDTOs.AuthorsDTO;
+using PruebaTecnicaDTOs.BooksDTO;
+using PruebaTecnicaDTOs.GenericDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +13,7 @@ namespace PruebaTecnicaBusiness.Interfaces
     {
         List<AuthorDTO> GetAllAuthors();
         AuthorDTO GetAuthorById(int id);
+        ResponseDTO RegisterAuthor(RegisterAuthorDTO registerBookDTO);
+
     }
 }

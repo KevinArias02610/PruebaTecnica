@@ -1,5 +1,6 @@
 ﻿using PruebaTecnicaBusiness.Interfaces;
 using PruebaTecnicaDTOs.AuthorsDTO;
+using PruebaTecnicaDTOs.GenericDTO;
 using PruebaTecnicaServices.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -67,6 +68,36 @@ namespace PruebaTecnicaBusiness.Class
             {
                 return new AuthorDTO();
             }
+        }
+
+        public ResponseDTO RegisterAuthor(RegisterAuthorDTO registerBookDTO)
+        {
+            ResponseDTO response = new();
+            try
+            {
+                if (string.IsNullOrEmpty(registerBookDTO.FullName) || string.IsNullOrEmpty(registerBookDTO.DateOfBirth) || string.IsNullOrEmpty(registerBookDTO.CityOfOrigin) || string.IsNullOrEmpty(registerBookDTO.Email))
+                    throw new Exception("Complete la información del autor.");
+
+                bool resp = _authorService.CreateAuthor(new SaveAuthorDTO()
+                {
+                    CityOfOrigin = registerBookDTO.CityOfOrigin,
+                    Email = registerBookDTO.Email,
+                    DateOfBirth = Convert.ToDateTime(registerBookDTO.DateOfBirth),
+                    FullName = registerBookDTO.FullName
+                });
+
+                if(resp)
+                {
+                    response.Status = "Ok";
+                    response.Message = "Autor creado correctamente.";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Status = "Error";
+                response.Message = ex.Message;
+            }
+            return response;
         }
     }
 }

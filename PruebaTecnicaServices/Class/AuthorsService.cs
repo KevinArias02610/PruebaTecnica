@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace PruebaTecnicaServices.Class
 {
@@ -14,17 +15,25 @@ namespace PruebaTecnicaServices.Class
     {
         ModelContext contextdb = new ModelContext();
 
-        public void CreateAuthor(SaveAuthorDTO saveAuthor)
+        public bool CreateAuthor(SaveAuthorDTO saveAuthor)
         {
-            Author author = new()
+            try
             {
-                CityOfOrigin = saveAuthor.CityOfOrigin,
-                DateOfBirth = saveAuthor.DateOfBirth,
-                Email = saveAuthor.Email,
-                FullName = saveAuthor.FullName ?? ""
-            };
-            contextdb.Authors.Add(author);
-            contextdb.SaveChanges();
+                Author author = new()
+                {
+                    CityOfOrigin = saveAuthor.CityOfOrigin,
+                    DateOfBirth = saveAuthor.DateOfBirth,
+                    Email = saveAuthor.Email,
+                    FullName = saveAuthor.FullName ?? ""
+                };
+                contextdb.Authors.Add(author);
+                contextdb.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false; // Error al crear
+            }
         }
 
         public List<Author> GetAllAuthors()

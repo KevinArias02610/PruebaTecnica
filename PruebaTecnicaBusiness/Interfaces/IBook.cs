@@ -13,5 +13,6 @@ namespace PruebaTecnicaBusiness.Interfaces
     public interface IBook
     {
         ResponseDTO RegisterBookData(RegisterBookDTO registerBookDTO);
+        List<BooksAuthorDTO> GetAllBooks();
     }
 }

@@ -11,6 +11,7 @@ namespace PruebaTecnicaServices.Interfaces
     public interface IBookService
     {
         List<Book> GetAllBooks();
-        void CreateBook(SaveBookDTO name);
+        bool CreateBook(SaveBookDTO name);
+        public List<BooksAuthorDTO> GetBooksAuthors();
     }
 }

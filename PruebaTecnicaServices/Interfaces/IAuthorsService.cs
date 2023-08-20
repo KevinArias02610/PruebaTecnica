@@ -13,6 +13,6 @@ namespace PruebaTecnicaServices.Interfaces
         List<Author> GetAllAuthors();
         Author GetAuthorById(int id);
         Author GetAuthorByName(string name);
-        void CreateAuthor(SaveAuthorDTO name);
+        bool CreateAuthor(SaveAuthorDTO name);
     }
 }

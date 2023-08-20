@@ -24,6 +24,21 @@ namespace PruebaTecnicaBusiness.Class
             _inventoryService = inventoryService;
             _bookService = bookService;
         }
+
+        public List<BooksAuthorDTO> GetAllBooks()
+        {
+            List<BooksAuthorDTO> response = new();
+            try
+            {
+                return _bookService.GetBooksAuthors();
+            }
+            catch (Exception ex)
+            {
+                return response;
+            }
+            return response;
+        }
+
         public ResponseDTO RegisterBookData(RegisterBookDTO registerBookDTO)
         {
             ResponseDTO response = new();
