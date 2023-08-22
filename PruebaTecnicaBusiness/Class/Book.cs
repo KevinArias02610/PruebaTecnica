@@ -51,6 +51,12 @@ namespace PruebaTecnicaBusiness.Class
                     throw new Exception("Complete la información del libro.");
                 #endregion
 
+                #region services
+
+                var book = _bookService.GetBookByName(registerBookDTO.BookTitle!);
+                if (book != null)
+                    throw new Exception("El libro ya está registrado.");
+
                 var author = _authorsService.GetAuthorByName(registerBookDTO.AuthorFullName!);
                 if (author is null)
                     throw new Exception("El autor no está registrado.");
@@ -73,10 +79,12 @@ namespace PruebaTecnicaBusiness.Class
                     });
 
                     response.Status = "Ok";
-                    response.Message = "Libro creado correctamente.";
-                }                
+                    response.Message = "Libro registrado correctamente.";
+                }
+
+                #endregion
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 response.Status = "Error";
                 response.Message = ex.Message;

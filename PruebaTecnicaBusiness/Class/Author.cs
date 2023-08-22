@@ -79,6 +79,10 @@ namespace PruebaTecnicaBusiness.Class
                 if (string.IsNullOrEmpty(registerBookDTO.FullName) || string.IsNullOrEmpty(registerBookDTO.DateOfBirth) || string.IsNullOrEmpty(registerBookDTO.CityOfOrigin) || string.IsNullOrEmpty(registerBookDTO.Email))
                     throw new Exception("Complete la información del autor.");
 
+                var author = _authorService.GetAuthorByName(registerBookDTO.FullName!);
+                if (author != null)
+                    throw new Exception("El autor ya está registrado.");
+
                 DateTime fecha = Convert.ToDateTime(registerBookDTO.DateOfBirth);
                 bool resp = _authorService.CreateAuthor(new SaveAuthorDTO()
                 {

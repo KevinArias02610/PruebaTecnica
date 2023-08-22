@@ -66,5 +66,17 @@ namespace PruebaTecnicaServices.Class
                         };
             return query.ToList();
         }
+
+        public Book GetBookByName(string name)
+        {
+            try
+            {
+                return contextdb.Books.FirstOrDefault(book => book.Title.Trim().ToLower() == name.Trim().ToLower())!;
+            }
+            catch
+            {
+                return new Book();
+            }
+        }
     }
 }

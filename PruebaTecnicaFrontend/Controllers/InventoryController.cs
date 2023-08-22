@@ -24,30 +24,30 @@ namespace PruebaTecnicaFrontend.Controllers
             if (response.IsSuccessStatusCode)
             {
                 var content = response.Content.ReadAsStringAsync().Result;
-                NumeroModel json = JsonConvert.DeserializeObject<NumeroModel>(content)!;
-                numero.Numero = json.Numero;
+                numero.Numero = Convert.ToInt32(content);
             }
             return View(numero);
         }
-        [HttpPut]
-        public async Task<IActionResult> UpdateNumberOfRecords(int records)
+        [HttpPost]
+        public async Task<IActionResult> UpdateNumberOfRecords(NumeroModel records)
         {
-            var content = new StringContent(records.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = await _httpClient.PutAsync("/Inventory/UpdateNumberOfRecords", content);
+            var numero = new NumeroModel();
+            var content = new StringContent(records.Numero.ToString(), Encoding.UTF8, "application/json");
+            HttpResponseMessage response = await _httpClient.PostAsync("/Inventory/UpdateNumberOfRecords", content);
             var responseBody = await response.Content.ReadAsStringAsync();
-            var apiResponse = JsonConvert.DeserializeObject<bool>(responseBody);
-
+            bool apiResponse = bool.Parse(responseBody);
             TempData.Clear();
+
             if (apiResponse)
             {
+                numero.Numero = records.Numero;
                 TempData["SuccessMessage"] = "Cantidad máxima de registros actualizada.";
             }
             else
             {
                 TempData["ErrorMessage"] = "Ocurrió un error.";
             }
-            return View();
-
+            return View(numero);
         }
         #endregion
     }

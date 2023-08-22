@@ -13,5 +13,7 @@ namespace PruebaTecnicaServices.Interfaces
         List<Book> GetAllBooks();
         bool CreateBook(SaveBookDTO name);
         public List<BooksAuthorDTO> GetBooksAuthors();
+        Book GetBookByName(string name);
+
     }
 }
