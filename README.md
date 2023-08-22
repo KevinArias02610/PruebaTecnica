@@ -98,7 +98,7 @@ CREATE TABLE "JULIAN"."INVENTORY"
 
 #### Home
 
-	Consumimos el servicio "GetAllBooks" para mostrar.
+	Consumimos el servicio "GetAllBooks" para mostrar los libros registrados con su respectivo autor.
 ![image](https://github.com/KevinArias02610/PruebaTecnica/assets/51764533/b3d9de15-641f-48b4-9bb0-71c0b4438bab)
 #### Registrar libros
 	Nos dirigimos a la vista de "Registrar libro" en donde vamos a rellenar los campos del formulario de registro; en caso de que el autor que ingresemos no esté registrado aparecerá la alerta
