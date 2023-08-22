@@ -36,7 +36,6 @@ namespace PruebaTecnicaBusiness.Class
             {
                 return response;
             }
-            return response;
         }
 
         public ResponseDTO RegisterBookData(RegisterBookDTO registerBookDTO)

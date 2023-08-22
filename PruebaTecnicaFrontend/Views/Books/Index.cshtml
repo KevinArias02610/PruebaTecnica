@@ -1,0 +1,151 @@
+﻿@*@model IEnumerable<PruebaTecnicaFrontend.Models.HomeModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4"><b>Libros</b></h1>
+    <hr />
+    <div>
+        <table class="table table-striped table-hover table-secondary">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Título</th>
+                    <th scope="col">Año</th>
+                    <th scope="col">Género</th>
+                    <th scope="col">Número de páginas</th>
+                    <th scope="col">Autor</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.BookTitle</th>
+                            <td scope="row">@item.BookYear</td>
+                            <td scope="row">@item.BookGenre</td>
+                            <td scope="row">@item.BookNumberOfPages</td>
+                            <td scope="row">@item.AuthorFullName</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel"><b>Eliminar Producto</b></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="#" method="post" accept-charset="utf-8">
+                    <div name="IdProducto" class="modal-body">
+                        Desea eliminar el producto id #<label id="idProducto"></label>?
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: url(https://static.vecteezy.com/system/resources/previews/004/720/395/original/interior-design-of-school-library-free-vector.jpg)no-repeat center top;
+        background-size: cover;
+        height: 100vh;
+        backdrop-filter: blur(4px);
+    }
+
+    .href {
+        margin-right: 5px;
+    }
+</style>*@
+@model IEnumerable<PruebaTecnicaFrontend.Models.HomeModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="grid"></div>
+
+<script>
+    $(document).ready(function () {
+        // Obtener los datos del modelo pasados desde el controlador
+        var jsonData = @Html.Raw(Json.Serialize(Model));
+
+        // Crear una instancia de KendoGrid con los datos del modelo
+        var grid = $("#grid").kendoGrid({
+            dataSource: {
+                data: jsonData,
+                schema: {
+                    model: {
+                        fields: {
+                            BookTitle: { type: "string" },
+                            BookYear: { type: "number" },
+                            BookGenre: { type: "string" },
+                            BookNumberOfPages: { type: "number" },
+                            AuthorFullName: { type: "string" }
+                        }
+                    }
+                }
+            },
+            columns: [
+                { field: "bookTitle", title: "Título" },
+                { field: "bookYear", title: "Año" },
+                { field: "bookGenre", title: "Género" },
+                { field: "bookNumberOfPages", title: "Número de páginas" },
+                { field: "authorFullName", title: "Autor" }
+            ],
+            editable: "inline",
+            filterable: true, // Habilitar filtrado
+            toolbar: "<h3>Libros</h3>" // Agregar título en la parte superior
+
+
+        }).data("kendoGrid");
+
+        // Agregar el evento de cambio de filtro
+        grid.bind("filterMenuInit", function (e) {
+            var filterMultiCheck = e.container.find("[data-role=multiselect]");
+            filterMultiCheck.kendoMultiSelect({
+                autoClose: false, // Mantener abierto el menú de selección múltiple
+                placeholder: "Seleccione...",
+                dataSource: {
+                    data: grid.dataSource.data(), // Usar los datos actuales para la lista de selección
+                    schema: {
+                        model: {
+                            fields: {
+                                // Configurar los campos según las columnas de la KendoGrid
+                                BookTitle: { type: "string" },
+                                BookYear: { type: "number" },
+                                BookGenre: { type: "string" },
+                                BookNumberOfPages: { type: "number" },
+                                AuthorFullName: { type: "string" }
+                            }
+                        }
+                    }
+                },
+                dataValueField: "valueField", // Ajustar al campo de la columna correspondiente
+                dataTextField: "textField" // Ajustar al campo de la columna correspondiente
+            });
+        });
+    });
+</script>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: url(https://images5.alphacoders.com/837/837878.jpg)no-repeat center top;
+        background-size: cover;
+        height: 100vh;
+        backdrop-filter: blur(5px);
+    }
+
+    .href {
+        margin-right: 5px;
+    }
+</style>

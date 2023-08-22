@@ -9,5 +9,6 @@ namespace PruebaTecnicaBusiness.Interfaces
     public interface IInventory
     {
         bool UpdateNumberOfRecords(int quantity);
+        int GetNumberOfRecords();
     }
 }

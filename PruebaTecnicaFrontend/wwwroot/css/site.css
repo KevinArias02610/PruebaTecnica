@@ -1,0 +1,68 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #f5f5f5; /* Color de fondo */
+    font-family: Arial, sans-serif;
+    color: #333; /* Color de texto principal */
+}
+
+/* Estilos para el título */
+.grid-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la KendoGrid */
+.k-grid {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    /* Estilos para las filas */
+    .k-grid tr {
+        background-color: #f5f5f5;
+    }
+
+    /* Estilos para las celdas */
+    .k-grid td {
+        padding: 10px;
+    }
+
+    /* Estilos para el encabezado de las columnas */
+    .k-grid th {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+    }
+/* Ejemplo de estilos personalizados para la barra de navegación */
+.navbar {
+    background-color: #333; /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+}
+
+.navbar-brand {
+    font-size: 24px; /* Cambia el tamaño de fuente del nombre de la marca */
+}
+
+.nav-link {
+    color: white; /* Cambia el color de los enlaces en la barra de navegación */
+}
+
+/* Agrega más estilos según tus necesidades */
+

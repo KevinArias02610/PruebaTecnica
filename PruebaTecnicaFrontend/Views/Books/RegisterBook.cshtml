@@ -1,0 +1,81 @@
+﻿@model IEnumerable<PruebaTecnicaFrontend.Models.HomeModel>
+@{
+    ViewData["Title"] = "RegisterBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (!string.IsNullOrEmpty(TempData["SuccessMessage"] as string))
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+<div class="container-fluid" style="max-width: 50rem; padding-top: 20px;">
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                </svg>  Registrar libro
+            </h3>
+        </div>
+        <div class="card-body">
+            <form action="#" method="post" accept-charset="utf-8">
+                <div class="row g-2">
+                    <div class="col-md">
+                        <label for="floatingSelectGrid" class="form-label"><b>Titulo:</b></label>
+                        <input type="text" required class="form-control" maxlength="100" name="BookTitle" aria-describedby="BookTitle">
+                    </div>
+                    <div class="col-md">
+                        <label for="floatingSelectGrid" class="form-label"><b>Año:</b></label>
+                        <input type="number" required class="form-control" maxlength="10" name="BookYear" aria-describedby="BookYear">
+                    </div>
+                </div>
+                <br />
+                <div class="row g-2">
+                    <div class="col-md">
+                        <div class="col-md">
+                            <label for="floatingSelectGrid" class="form-label"><b>Género:</b></label>
+                            <input type="text" required class="form-control" maxlength="100" name="BookGenre" aria-describedby="BookGenre">
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="col-md">
+                            <label for="floatingSelectGrid" class="form-label"><b>Número de páginas:</b></label>
+                            <input type="number" required  class="form-control" maxlength="10" name="BookNumberOfPages" aria-describedby="BookNumberOfPages">
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="mb-3">
+                    <label for="floatingSelectGrid" class="form-label"><b>Autor:</b></label>
+                    <input type="text" required class="form-control" maxlength="100" name="AuthorFullName" aria-describedby="AuthorFullName">
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-success" type="submit">Registrar Libro</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: montserrat;
+        background: url(https://images5.alphacoders.com/837/837878.jpg)no-repeat center top;
+        background-size: cover;
+        font-family: sans-serif;
+        height: 100vh;
+        backdrop-filter: blur(5px);
+    }
+</style>
+
+

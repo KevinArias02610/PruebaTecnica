@@ -4,6 +4,7 @@ using PruebaTecnicaDTOs.GenericDTO;
 using PruebaTecnicaServices.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,11 +79,12 @@ namespace PruebaTecnicaBusiness.Class
                 if (string.IsNullOrEmpty(registerBookDTO.FullName) || string.IsNullOrEmpty(registerBookDTO.DateOfBirth) || string.IsNullOrEmpty(registerBookDTO.CityOfOrigin) || string.IsNullOrEmpty(registerBookDTO.Email))
                     throw new Exception("Complete la información del autor.");
 
+                DateTime fecha = Convert.ToDateTime(registerBookDTO.DateOfBirth);
                 bool resp = _authorService.CreateAuthor(new SaveAuthorDTO()
                 {
                     CityOfOrigin = registerBookDTO.CityOfOrigin,
                     Email = registerBookDTO.Email,
-                    DateOfBirth = Convert.ToDateTime(registerBookDTO.DateOfBirth),
+                    DateOfBirth = fecha,
                     FullName = registerBookDTO.FullName
                 });
 

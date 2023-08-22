@@ -15,6 +15,19 @@ namespace PruebaTecnicaBusiness.Class
         {
             _inventoryService = inventoryService; //Inyección de interfaz de servicios inventoryService
         }
+
+        public int GetNumberOfRecords()
+        {
+            try
+            {
+                return _inventoryService.GetNumberOfRecords(); //Consumimos el servicio
+            }
+            catch
+            {
+                return 0; //Error obteniendo registros
+            }
+        }
+
         public bool UpdateNumberOfRecords(int quantity)
         {
             try
